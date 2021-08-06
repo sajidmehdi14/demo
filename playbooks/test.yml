@@ -1,0 +1,9 @@
+- name: Config Changes
+  hosts: mariadbs
+  become: yes
+# define tasks
+  tasks:
+# task name (any name you like)
+    - name: Test Task
+# use file module to set the file state
+      file: path=/home/ec2-user/test.conf state=touch owner=ec2-user group=ec2-user mode=0600      
