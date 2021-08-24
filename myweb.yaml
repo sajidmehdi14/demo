@@ -23,9 +23,11 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: justmeandopensource/myweb:<TAG>
+      - image: registry2.innowi.com/myweb:<TAG>
         imagePullPolicy: Always
         name: myweb
+      imagePullSecrets:
+        - name: regcred2
 
 ---
 apiVersion: v1
